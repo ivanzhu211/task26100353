@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillrecalc"
+version = "0.1.0"
+description = "Background skill-profile recalculation module backed by SQLite"
+requires-python = ">=3.10"
+
+[project.scripts]
+skillrecalc-worker = "skillrecalc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
